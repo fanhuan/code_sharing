@@ -21,7 +21,6 @@ ps_fil5 <- merge_phyloseq(otu_table(rest,taxa_are_rows = FALSE),
                           phy_tree(fungi_ps))
 saveRDS(ps_fil5,file = 'ps_fil5.rds')
 otu_fil5 <- as(otu_table(ps_fil5), "matrix")
-sort(rowSums(otu_all))
 write.csv(otu_fil5, 'otu_fungi_filter5.csv')
 # Normalization: TMM - edgeR transformation (Edwards 2015 PNAS)
 otu_fil5 <- as(otu_table(ps_fil5), "matrix")
